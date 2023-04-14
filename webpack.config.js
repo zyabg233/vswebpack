@@ -21,4 +21,12 @@ module.exports = {
     },
     //插件的数组，将来webpack在运行时，会加载并调用这些插件
     plugins: [htmlPlugin],
+    devServer:{
+        //自动打开
+        open: true,
+        // 如果端口号是80可以被省略 设置端口号
+        port:80,
+        //指定实时打包所使用的主机地址,指定运行的主机地址
+        host:'localhost'
+    }
 }

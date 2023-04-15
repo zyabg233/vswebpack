@@ -8,6 +8,7 @@ const htmlPlugin = new HtmlPlugin({
     //指定复制出来的文件名和存放路径
     filename: './index.html',
 })
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     //开发用development 发布用production因为上线追求的是体积
     mode: 'development',
@@ -20,7 +21,7 @@ module.exports = {
         filename: 'js/main.js'
     },
     //插件的数组，将来webpack在运行时，会加载并调用这些插件
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin, new CleanWebpackPlugin()],
     devServer: {
         //自动打开
         open: true,

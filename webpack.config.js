@@ -17,7 +17,7 @@ module.exports = {
         // 存放到目录
         path: path.join(__dirname, 'dist'),
         // 生成文件名
-        filename: 'main.js'
+        filename: 'js/main.js'
     },
     //插件的数组，将来webpack在运行时，会加载并调用这些插件
     plugins: [htmlPlugin],
